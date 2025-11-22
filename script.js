@@ -1,15 +1,4 @@
-// Example structure to add recipe cards dynamically later
-// You can expand this as you add recipes.
-
-const recipes = {
-    pasta: [],
-    rice: [],
-    soups: [],
-    salads: [],
-    local: []
-};
-
-// Function to add a recipe card to a grid
+// Function that creates a recipe card inside the appropriate section
 function addRecipe(category, name, image, link) {
     const grid = document.getElementById(`${category}-grid`);
 
@@ -29,5 +18,27 @@ function addRecipe(category, name, image, link) {
     grid.appendChild(card);
 }
 
-// Example usage (remove this later)
-// addRecipe("pasta", "My Carbonara", "images/carbonara.jpg", "carbonara.html");
+// --- Add your pasta dishes here ---
+
+addRecipe(
+    "pasta",
+    "Broccolo Pasta",
+    "https://placehold.co/300x200?text=Broccolo+Pasta",
+    "broccolo-pasta.html"
+);
+
+addRecipe(
+    "pasta",
+    "Pasta Bolognese",
+    "https://placehold.co/300x200?text=Bolognese",
+    "pasta-bolognese.html"
+);
+
+addRecipe(
+    "pasta",
+    "Gnocchi con Funghi e Mascarpone",
+    "https://placehold.co/300x200?text=Gnocchi",
+    "gnocchi-funghi.html"
+);
+
+// You can add more categories later in the same format
